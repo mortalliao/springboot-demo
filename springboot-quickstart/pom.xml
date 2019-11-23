@@ -15,7 +15,7 @@
     <groupId>com.springboot.demo</groupId>
     <artifactId>springboot-quickstart</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>quickstart</name>
+    <name>springboot-quickstart</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
