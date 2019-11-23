@@ -1,0 +1,8 @@
+server:
+  port: 8082
+
+#  spring.resources.static-locations=classpath:/view/
+
+#spring:
+#  resources.static-locations: classpath:templates
+#  mvc.view.suffix: .html
