@@ -19,8 +19,11 @@ public class CacheController {
 
     @Cacheable(value = "emp", key = "targetClass + methodName +#id")
     @GetMapping("/{id:\\d+}")
-    public User queryAll(@PathVariable("id") Long id) {
+    public User getUser(@PathVariable("id") Long id) {
         System.out.println("hint the cache");
         return new User(1L, "Jim", "pwd");
     }
+
+//    @CacheEvict
+//    @CachePut
 }
