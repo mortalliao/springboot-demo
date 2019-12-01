@@ -29,6 +29,18 @@ public class JmsSessionController {
         return "success";
     }
 
+    @PostMapping("/message2/listen")
+    public String create2(@RequestParam String msg) {
+        jmsTemplate.convertAndSend("customer:msg2:new", msg);
+        return "success";
+    }
+
+    @PostMapping("/message2/direct")
+    public String handle2(@RequestParam String msg) {
+        jmsSessionService.handleInCode(msg);
+        return "success";
+    }
+
     @GetMapping("message")
     public String read() {
         jmsTemplate.setReceiveTimeout(2000);
